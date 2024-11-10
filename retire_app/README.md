@@ -1,10 +1,9 @@
-# Getting Started with Create React App
+## Project Init
+- Typescript
+- Tailwindcss
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+### `npx tsc --init`
+Create typescript config
 
 ### `npm start`
 
