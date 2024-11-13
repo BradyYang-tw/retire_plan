@@ -1,9 +1,12 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import logo from './assets/logo.svg';
 import Example from './components/tailwind/Example/Example';
 import Sidebar from './containers/sidebar/Sidebar';
 import Main from './containers/main/Main';
+
 import './App.css';
+
 
 function App() {
   return (
@@ -12,7 +15,8 @@ function App() {
         <Sidebar></Sidebar>
       </div>
       <div className="Container">
-        <Main></Main>
+        {/* <Main></Main> */}
+        <Outlet ></Outlet>
       </div>
       
       {/* <Example></Example> */}

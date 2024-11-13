@@ -3,13 +3,41 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Homepage from './containers/homepage/Homepage';
+import AccountManagerment from './containers/accountmanagerment/AccountManagerment';
+import AssetAllocation from './containers/assetAllocation/AssetAllocation';
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    // loader: rootLoader,
+    children: [
+      {
+        path: "Homepage",
+        element: <Homepage />,
+        // loader: teamLoader,
+      },
+      {
+        path: "/AccountManagerment",
+        element: <AccountManagerment />,
+      },
+      {
+        path: "/AssetAllocation",
+        element: <AssetAllocation />
+      }
+    ],
+  },
+  
+]);
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} /> 
+    {/* <App /> */}
   </React.StrictMode>
 );
 
